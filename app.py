@@ -30,5 +30,9 @@ def toggle_task(task_id):
     return jsonify({'tasks': tasks})
 
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 5000))  # Use Heroku's port or 5000 locally
-    app.run(host='0.0.0.0', port=port, debug=True)
+    app.run(debug=True)
+
+# Uncomment below code to run the app on Heroku
+# if __name__ == '__main__':
+#     port = int(os.environ.get('PORT', 5000))  # Use Heroku's port or 5000 locally
+#     app.run(host='0.0.0.0', port=port, debug=True)
